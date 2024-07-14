@@ -48,19 +48,26 @@ namespace Quiz_Game
                 }
 
             };
+        static List<Button> myButtons = new List<Button>();
+        static int myRandomNumber;
         public Form1()
         {
             InitializeComponent();
+            myButtons.Add(button1);
+            myButtons.Add(button2);
+            myButtons.Add(button3);
+            myButtons.Add(button4);
             SoruGetir();
         }
 
         public void SoruGetir()
         {
+            
             if(sayac<sorularim.Count)
             {
+                label1.Text = sorularim[sayac].Qtext.ToString();
                 Random random = new Random();
-                int myRandomNumber = random.Next(0, 4); // 0 dahil, 4 hariç
-                List<Button> myButtons = new List<Button> { button1,button2,button3,button4};
+                myRandomNumber = random.Next(0, 4); // 0 dahil, 4 hariç
                 Console.WriteLine("ŞİMDİ ŞANSLI SAYI: " + myRandomNumber);
                 int yanlisSecnSay = 0;
                 for (int i=0;i<myButtons.Count;i++)
@@ -75,7 +82,7 @@ namespace Quiz_Game
                 }
 
                 myButtons[myRandomNumber].Click += new System.EventHandler(this.Dogru_Click);
-                //myButtons[myRandomNumber].Text = sorularim[sayac].Correctanswer;
+                myButtons[myRandomNumber].Text = sorularim[sayac].Correctanswer;
                 Console.WriteLine("BEKLENEN CEVAP: "+myButtons[myRandomNumber].Text);
                 
                 sayac++;
@@ -98,10 +105,18 @@ namespace Quiz_Game
             Console.WriteLine("DOĞRU CEVAP");
             label2.Text = "Doğru Cevap !";
             label2.Visible = true;
+            for (int i = 0; i < myButtons.Count; i++)
+            {
+                if (i != myRandomNumber)
+                {
+                    myButtons[i].Click -= new System.EventHandler(this.Button_Click);
+                }
+            }
+            myButtons[myRandomNumber].Click -= new System.EventHandler(this.Dogru_Click);
             SoruGetir();
-            Thread.Sleep(1000);
-            label2.Visible = false;
-            //button1 -= 
+
+
+
         }
 
         public void yanlisCevapFonk()
@@ -109,10 +124,16 @@ namespace Quiz_Game
             label2.Text = "Yanlış Cevap!";
             label2.Visible=true;
             sayac = 0;
+            for (int i = 0; i < myButtons.Count; i++)
+            {
+                if (i != myRandomNumber)
+                {
+                    myButtons[i].Click -= new System.EventHandler(this.Button_Click);
+                }
+            }
+            myButtons[myRandomNumber].Click -= new System.EventHandler(this.Dogru_Click);
             SoruGetir();
-            Thread.Sleep(1000);
-            label2.Visible = false;
-
+            
         }
     }
 }
