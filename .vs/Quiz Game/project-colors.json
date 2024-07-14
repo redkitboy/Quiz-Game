@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8fdb2380-d32d-4ccb-9dc2-980ecdbaddac": {
+      "ProjectGuid": "8fdb2380-d32d-4ccb-9dc2-980ecdbaddac",
+      "DisplayName": "Quiz Game",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

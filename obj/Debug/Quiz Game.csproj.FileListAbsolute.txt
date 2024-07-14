@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Quiz Game\obj\Debug\Quiz Game.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Quiz Game\obj\Debug\Quiz Game.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\Quiz Game\obj\Debug\Quiz_Game.Form1.resources
+C:\Users\User\source\repos\Quiz Game\obj\Debug\Quiz_Game.Properties.Resources.resources
+C:\Users\User\source\repos\Quiz Game\obj\Debug\Quiz Game.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Quiz Game\obj\Debug\Quiz Game.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Quiz Game\bin\Debug\Quiz Game.exe.config
+C:\Users\User\source\repos\Quiz Game\bin\Debug\Quiz Game.exe
+C:\Users\User\source\repos\Quiz Game\bin\Debug\Quiz Game.pdb
+C:\Users\User\source\repos\Quiz Game\obj\Debug\Quiz Game.exe
+C:\Users\User\source\repos\Quiz Game\obj\Debug\Quiz Game.pdb
