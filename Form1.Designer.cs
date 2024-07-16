@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.Location = new System.Drawing.Point(315, 114);
+            this.label1.Location = new System.Drawing.Point(117, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 26);
             this.label1.TabIndex = 0;
@@ -48,43 +48,47 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.button1.Location = new System.Drawing.Point(122, 189);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(209, 53);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.button2.Location = new System.Drawing.Point(435, 189);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(209, 53);
             this.button2.TabIndex = 2;
             this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.button3.Location = new System.Drawing.Point(122, 286);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(209, 53);
             this.button3.TabIndex = 3;
             this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.button4.Location = new System.Drawing.Point(435, 286);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(209, 53);
             this.button4.TabIndex = 4;
             this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // label2
             // 

@@ -24,9 +24,9 @@ namespace Quiz_Game
                 },
                 new Questions
                 {
-                    Qtext = "What is 2 + 2?",
-                    Correctanswer = "4",
-                    Wronganswers = new string[] { "3", "5", "6" }
+                    Qtext = "What is 9 x 3?",
+                    Correctanswer = "27",
+                    Wronganswers = new string[] { "11", "49", "35" }
                 },
                 new Questions
                 {
@@ -45,6 +45,12 @@ namespace Quiz_Game
                     Qtext = "What is the largest planet in our Solar System?",
                     Correctanswer = "Jupiter",
                     Wronganswers = new string[] { "Earth", "Saturn", "Mars" }
+                },
+                new Questions
+                {
+                    Qtext = "Where was Euro 2024 Football Championship held?",
+                    Correctanswer = "Germany",
+                    Wronganswers = new string[] { "Sweden", "Brasil", "Poland" }
                 }
 
             };
@@ -76,7 +82,7 @@ namespace Quiz_Game
                     {
                         myButtons[i].Click += new System.EventHandler(this.Button_Click);
                         myButtons[i].Text = sorularim[sayac].Wronganswers[yanlisSecnSay];
-                        Console.WriteLine(i +  "  numarali secenek hatali secenek şeklinde doldurdldu");
+                        //Console.WriteLine(i +  "  numarali secenek hatali secenek şeklinde doldurdldu");
                         yanlisSecnSay++;
                     }
                 }
@@ -86,9 +92,12 @@ namespace Quiz_Game
                 Console.WriteLine("BEKLENEN CEVAP: "+myButtons[myRandomNumber].Text);
                 
                 sayac++;
+                Console.WriteLine("\n \n");
+                //Thread.Sleep(1000);
             } else
             {
-                label1.Text = "Bütün soruları cevapladınız";
+                label2.Text = "Bütün soruları cevapladınız";
+                label2.Visible = true;
             }
 
             
@@ -103,8 +112,10 @@ namespace Quiz_Game
         private void Dogru_Click(object sender, EventArgs e)
         {
             Console.WriteLine("DOĞRU CEVAP");
-            label2.Text = "Doğru Cevap !";
-            label2.Visible = true;
+            label2.Text = "doğru cevap !";
+            label2.Visible=true;
+            myButtons[myRandomNumber].BackColor = Color.Green;
+            Thread.Sleep(1000);
             for (int i = 0; i < myButtons.Count; i++)
             {
                 if (i != myRandomNumber)
@@ -113,7 +124,10 @@ namespace Quiz_Game
                 }
             }
             myButtons[myRandomNumber].Click -= new System.EventHandler(this.Dogru_Click);
+            myButtons[myRandomNumber].BackColor = Color.WhiteSmoke;
+            label2.Visible = false;
             SoruGetir();
+            
 
 
 
