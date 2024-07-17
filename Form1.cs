@@ -14,6 +14,7 @@ namespace Quiz_Game
     public partial class Form1 : Form
     {
         static int sayac = 0;
+        static int zamansayac = 0;
         List<Questions> sorularim = new List<Questions>
             {
                 new Questions
@@ -56,6 +57,8 @@ namespace Quiz_Game
             };
         static List<Button> myButtons = new List<Button>();
         static int myRandomNumber;
+        static Button wrongButton = new Button();
+
         public Form1()
         {
             InitializeComponent();
@@ -105,17 +108,18 @@ namespace Quiz_Game
 
         private void Button_Click(object sender, EventArgs e)
         {
+            wrongButton = sender as Button;
             Console.WriteLine("YANLIŞ CEVAP");
             yanlisCevapFonk();
         }
 
         private void Dogru_Click(object sender, EventArgs e)
         {
+            dogruTimer.Start();
             Console.WriteLine("DOĞRU CEVAP");
             label2.Text = "doğru cevap !";
-            label2.Visible=true;
-            myButtons[myRandomNumber].BackColor = Color.Green;
-            Thread.Sleep(1000);
+            //label2.Visible=true;
+            
             for (int i = 0; i < myButtons.Count; i++)
             {
                 if (i != myRandomNumber)
@@ -124,19 +128,43 @@ namespace Quiz_Game
                 }
             }
             myButtons[myRandomNumber].Click -= new System.EventHandler(this.Dogru_Click);
-            myButtons[myRandomNumber].BackColor = Color.WhiteSmoke;
-            label2.Visible = false;
-            SoruGetir();
+            //myButtons[myRandomNumber].BackColor = Color.WhiteSmoke;
+            //label2.Visible = false;
+            
             
 
 
 
         }
 
+        
+
+        private void timer1_Tick(object sender, EventArgs e) // "dogruTimer" tick yaptığında çalışır
+        {
+            zamansayac++;
+            if(zamansayac==2)
+            {
+                label2.Visible = true;
+                myButtons[myRandomNumber].BackColor = Color.LawnGreen;
+            }
+            else if(zamansayac==10)
+            {
+                label2.Visible = false;
+                zamansayac = 0;
+                myButtons[myRandomNumber].BackColor= Color.WhiteSmoke;
+                dogruTimer.Stop();
+                //myButtons[myRandomNumber].(); butonun seçili olmasını iptal edeceğiz
+                SoruGetir();
+
+            }
+        }
+
+
+
         public void yanlisCevapFonk()
         {
             label2.Text = "Yanlış Cevap!";
-            label2.Visible=true;
+            yanlisTimer.Start();
             sayac = 0;
             for (int i = 0; i < myButtons.Count; i++)
             {
@@ -146,8 +174,28 @@ namespace Quiz_Game
                 }
             }
             myButtons[myRandomNumber].Click -= new System.EventHandler(this.Dogru_Click);
-            SoruGetir();
-            
+
+
+        }
+        private void yanlisTimer_Tick(object sender, EventArgs e)
+        {
+            //Button wrongbutton = sender as Button;
+
+            zamansayac++;
+            if (zamansayac == 2)
+            {
+                wrongButton.BackColor = Color.Red;
+                myButtons[myRandomNumber].BackColor = Color.LawnGreen;
+            }
+            else if (zamansayac == 10)
+            {
+                label2.Visible = false;
+                zamansayac = 0;
+                myButtons[myRandomNumber].BackColor = Color.WhiteSmoke;
+                wrongButton.BackColor= Color.WhiteSmoke;
+                yanlisTimer.Stop();
+                SoruGetir();
+            }
         }
     }
 }

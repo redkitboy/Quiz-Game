@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.dogruTimer = new System.Windows.Forms.Timer(this.components);
+            this.yanlisTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -101,6 +104,16 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "label2";
             // 
+            // dogruTimer
+            // 
+            this.dogruTimer.Interval = 200;
+            this.dogruTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // yanlisTimer
+            // 
+            this.yanlisTimer.Interval = 200;
+            this.yanlisTimer.Tick += new System.EventHandler(this.yanlisTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +140,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer dogruTimer;
+        private System.Windows.Forms.Timer yanlisTimer;
     }
 }
 
