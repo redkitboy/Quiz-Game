@@ -23,121 +23,141 @@ namespace Quiz_Game
     {
         Qtext = "Türkiye'nin başkenti neresidir?",
         Correctanswer = "Ankara",
-        Wronganswers = new string[] { "İstanbul", "İzmir", "Bursa" }
+        Wronganswers = new string[] { "İstanbul", "İzmir", "Bursa" },
+        seviye = 1
     },
     new Questions
     {
         Qtext = "En büyük okyanus hangisidir?",
         Correctanswer = "Pasifik Okyanusu",
-        Wronganswers = new string[] { "Atlas Okyanusu", "Hint Okyanusu", "Arktik Okyanusu" }
+        Wronganswers = new string[] { "Atlas Okyanusu", "Hint Okyanusu", "Arktik Okyanusu" },
+        seviye = 3
     },
     new Questions
     {
         Qtext = "Türkiye'nin en yüksek dağı hangisidir?",
         Correctanswer = "Ağrı Dağı",
-        Wronganswers = new string[] { "Erciyes Dağı", "Kaçkar Dağı", "Uludağ" }
+        Wronganswers = new string[] { "Erciyes Dağı", "Kaçkar Dağı", "Uludağ" },
+        seviye = 2
     },
     new Questions
     {
         Qtext = "İstanbul Boğazı hangi iki denizi birleştirir?",
         Correctanswer = "Marmara Denizi ve Karadeniz",
-        Wronganswers = new string[] { "Ege Denizi ve Akdeniz", "Karadeniz ve Ege Denizi", "Marmara Denizi ve Akdeniz" }
+        Wronganswers = new string[] { "Ege Denizi ve Akdeniz", "Karadeniz ve Ege Denizi", "Marmara Denizi ve Akdeniz" },
+        seviye = 2
     },
     new Questions
     {
         Qtext = "Türkiye'nin en uzun nehri hangisidir?",
         Correctanswer = "Kızılırmak",
-        Wronganswers = new string[] { "Fırat Nehri", "Dicle Nehri", "Meriç Nehri" }
+        Wronganswers = new string[] { "Fırat Nehri", "Dicle Nehri", "Meriç Nehri" },
+        seviye = 3
     },
     new Questions
     {
         Qtext = "Dünya'nın uydusu nedir?",
         Correctanswer = "Ay",
-        Wronganswers = new string[] { "Güneş", "Venüs", "Mars" }
+        Wronganswers = new string[] { "Güneş", "Venüs", "Mars" },
+        seviye = 2
     },
     new Questions
     {
         Qtext = "Bir yıl kaç gündür?",
         Correctanswer = "365",
-        Wronganswers = new string[] { "360", "364", "366" }
+        Wronganswers = new string[] { "360", "364", "366" },
+        seviye = 2
     },
     new Questions
     {
         Qtext = "En uzun süre tahtta kalan Osmanlı padişahı kimdir?",
         Correctanswer = "Kanuni Sultan Süleyman",
-        Wronganswers = new string[] { "Fatih Sultan Mehmet", "Yavuz Sultan Selim", "II. Mahmud" }
+        Wronganswers = new string[] { "Fatih Sultan Mehmet", "Yavuz Sultan Selim", "II. Mahmud" },
+        seviye = 3
     },
     new Questions
     {
         Qtext = "Rönesans hangi ülkede başlamıştır?",
         Correctanswer = "İtalya",
-        Wronganswers = new string[] { "Fransa", "İngiltere", "İspanya" }
+        Wronganswers = new string[] { "Fransa", "İngiltere", "İspanya" },
+        seviye = 3
     },
     new Questions
     {
         Qtext = "Hangi gezegen halkalarıyla ünlüdür?",
         Correctanswer = "Satürn",
-        Wronganswers = new string[] { "Mars", "Jüpiter", "Venüs" }
+        Wronganswers = new string[] { "Mars", "Jüpiter", "Venüs" },
+        seviye = 3
     },
     new Questions
     {
         Qtext = "Türkiye'nin en büyük gölü hangisidir?",
         Correctanswer = "Van Gölü",
-        Wronganswers = new string[] { "Tuz Gölü", "Beyşehir Gölü", "Eğirdir Gölü" }
+        Wronganswers = new string[] { "Tuz Gölü", "Beyşehir Gölü", "Eğirdir Gölü" },
+        seviye = 2
     },
     new Questions
     {
         Qtext = "Türkiye'nin ilk cumhurbaşkanı kimdir?",
         Correctanswer = "Mustafa Kemal Atatürk",
-        Wronganswers = new string[] { "İsmet İnönü", "Celal Bayar", "Adnan Menderes" }
+        Wronganswers = new string[] { "İsmet İnönü", "Celal Bayar", "Adnan Menderes" },
+        seviye = 1
     },
     new Questions
     {
         Qtext = "Dünyanın en yüksek şelalesi hangisidir?",
         Correctanswer = "Angel Şelalesi",
-        Wronganswers = new string[] { "Niagara Şelalesi", "Victoria Şelalesi", "Iguazu Şelalesi" }
+        Wronganswers = new string[] { "Niagara Şelalesi", "Victoria Şelalesi", "Iguazu Şelalesi" },
+        seviye = 3
     },
     new Questions
     {
         Qtext = "Hangi elementin kimyasal sembolü 'O'dur?",
         Correctanswer = "Oksijen",
-        Wronganswers = new string[] { "Altın", "Gümüş", "Demir" }
+        Wronganswers = new string[] { "Altın", "Gümüş", "Demir" },
+        seviye = 2
     },
     new Questions
     {
         Qtext = "Dünya'nın en uzun nehri hangisidir?",
         Correctanswer = "Nil Nehri",
-        Wronganswers = new string[] { "Amazon Nehri", "Yangtze Nehri", "Mississippi Nehri" }
+        Wronganswers = new string[] { "Amazon Nehri", "Yangtze Nehri", "Mississippi Nehri" },
+        seviye = 3
     },
     new Questions
     {
         Qtext = "Türkçede en çok kullanılan harf hangisidir?",
         Correctanswer = "A",
-        Wronganswers = new string[] { "E", "I", "O" }
+        Wronganswers = new string[] { "E", "I", "O" },
+        seviye = 3
     },
     new Questions
     {
         Qtext = "Yer çekimini keşfeden bilim insanı kimdir?",
         Correctanswer = "Isaac Newton",
-        Wronganswers = new string[] { "Albert Einstein", "Galileo Galilei", "Nikola Tesla" }
+        Wronganswers = new string[] { "Albert Einstein", "Galileo Galilei", "Nikola Tesla" },
+        seviye = 2
     },
     new Questions
     {
         Qtext = "Dünya'nın en büyük çölü hangisidir?",
         Correctanswer = "Sahra Çölü",
-        Wronganswers = new string[] { "Gobi Çölü", "Arabistan Çölü", "Kalahari Çölü" }
+        Wronganswers = new string[] { "Gobi Çölü", "Arabistan Çölü", "Kalahari Çölü" },
+        seviye = 3
     },
     new Questions
     {
         Qtext = "Bir futbol maçında kaç oyuncu sahada olur (her iki takım toplamı)?",
         Correctanswer = "22",
-        Wronganswers = new string[] { "20", "24", "18" }
+        Wronganswers = new string[] { "20", "24", "18" },
+        seviye = 2
     },
     new Questions
     {
         Qtext = "Türk Bayrağı'nın rengi nedir?",
         Correctanswer = "Kırmızı ve Beyaz",
-        Wronganswers = new string[] { "Mavi ve Beyaz", "Yeşil ve Beyaz", "Kırmızı ve Siyah" }
+        Wronganswers = new string[] { "Mavi ve Beyaz", "Yeşil ve Beyaz", "Kırmızı ve Siyah" },
+        seviye = 1
     }
 };
 

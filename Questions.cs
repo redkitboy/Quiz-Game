@@ -11,5 +11,7 @@ namespace Quiz_Game
         public string Qtext { get; set; }
         public string Correctanswer { get; set; }
         public string[] Wronganswers { get; set; }
+        public int seviye { get; set; }
     }
+
 }
