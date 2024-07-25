@@ -158,6 +158,13 @@ namespace Quiz_Game
         Correctanswer = "Kırmızı ve Beyaz",
         Wronganswers = new string[] { "Mavi ve Beyaz", "Yeşil ve Beyaz", "Kırmızı ve Siyah" },
         seviye = 1
+    },
+    new Questions
+    {
+        Qtext = "Hangi şehir daha batıdadır??",
+        Correctanswer = "Londra",
+        Wronganswers = new string[] { "Sofya", "İstanbul", "Moskova" },
+        seviye = 3
     }
 };
 
