@@ -17,6 +17,7 @@ namespace Quiz_Game
         static int zamansayac = 0;
         static int yanlisSayisi = 0;
         static int puansayac = 0;
+        static int yeniOdul = 0;
         List<Questions> sorularim = new List<Questions>
 {
     new Questions
@@ -164,9 +165,18 @@ namespace Quiz_Game
         Qtext = "Hangi şehir daha batıdadır??",
         Correctanswer = "Londra",
         Wronganswers = new string[] { "Sofya", "İstanbul", "Moskova" },
-        seviye = 3
+        seviye = 10
+    },
+    new Questions
+    {
+        Qtext = "Haziran ayında hangi şehrin gün süresi daha uzun olur?",
+        Correctanswer = "Samsun",
+        Wronganswers = new string[] { "Hatay", "Van", "Muğla" },
+        seviye = 10
     }
 };
+        List<Questions> copluk = new List<Questions>();
+
 
         static List<Button> myButtons = new List<Button>();
         static int myRandomNumber;
@@ -191,7 +201,9 @@ namespace Quiz_Game
                 sayac = random1.Next(0, sorularim.Count);
                 if (sayac < sorularim.Count)
                 {
+                    yeniOdul = sorularim[sayac].seviye;
                     label1.Text = sorularim[sayac].Qtext.ToString();
+                    
                     Random random = new Random();
                     myRandomNumber = random.Next(0, 4); // 0 dahil, 4 hariç
                     Console.WriteLine("ŞİMDİ ŞANSLI SAYI: " + myRandomNumber);
@@ -210,15 +222,23 @@ namespace Quiz_Game
                     myButtons[myRandomNumber].Click += new System.EventHandler(this.Dogru_Click);
                     myButtons[myRandomNumber].Text = sorularim[sayac].Correctanswer;
                     Console.WriteLine("BEKLENEN CEVAP: " + myButtons[myRandomNumber].Text);
-
+                    copluk.Add(sorularim[sayac]);
+                    sorularim.RemoveAt(sayac);
+                    Console.WriteLine("Artık " + sorularim.Count + " tane soru kaldı.");
                     sayac++;
                     Console.WriteLine("\n \n");
                     //Thread.Sleep(1000);
                 }
                 else
                 {
-                    label2.Text = "Bütün soruları cevapladınız";
+                    foreach (var item in myButtons)
+                    {
+                        item.Visible = false;
+                    }
+                    label1.Visible = false;
+                    label2.Text = "Oyunu tamamladınız.";
                     label2.Visible = true;
+                    label3.Visible = true;
                 }
             } else
             {
@@ -236,8 +256,9 @@ namespace Quiz_Game
             
         }
 
-        private void Button_Click(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)// YANLIŞ
         {
+            // en son görüntülenen soruyu copluk listesine ekleyeceğiz. sorularim listesinden çıkaracağız.
             wrongButton = sender as Button;
             Console.WriteLine("YANLIŞ CEVAP");
             yanlisCevapFonk();
@@ -246,7 +267,7 @@ namespace Quiz_Game
         private void Dogru_Click(object sender, EventArgs e)
         {
             dogruTimer.Start();
-            puansayac++;
+            puansayac += yeniOdul;
             label3.Text=puansayac.ToString() + " Puan topladınız.";
             Console.WriteLine("DOĞRU CEVAP");
             label2.Text = "doğru cevap !";
